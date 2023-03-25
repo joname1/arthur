@@ -1,0 +1,30 @@
+{
+  "name": "create-react-app",
+  "version": "3.0.0",
+  "private": true,
+  "dependencies": {
+    "@antv/l7": "^2.0.36",
+    "@antv/l7-maps": "^2.0.36",
+    "antd-mobile": "^2.0.0",
+    "babel-polyfill": "^6.26.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13"
+  },
+  "homepage": "./",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.2.0",
+    "babel-preset-env": "^1.7.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "react-app-rewired": "^1.6.2"
+  }
+}
