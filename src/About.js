@@ -1,23 +1,34 @@
-import React, { Component } from 'react';
-import { Toast} from 'antd-mobile';
+﻿import React, { Component } from 'react';
+import request from './utils/request';
+import { Toast } from 'antd-mobile';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      info: ''
     };
   }
+  getInfo() {
+    request({
+      url: '/v2/asir/about'
+    }).then(data => {
+      this.setState({
+        info: data[0].result.data
+      })
+      Toast.hide();
+    })
+  }
 
-
-  componentWillMount() {
-    // Toast.loading('加载中', 0);
+  componentDidMount() {
+    Toast.loading('加载中', 0);
+    this.getInfo()
   }
 
   render() {
     return (
-      <div style={{padding: 16}}>
-        <p>以上地点为网友行驶于主、辅路被摄像头拍到、设卡抓到!</p>
-        <p>本站信息收集于网路并保留最终解释权!</p>
+      <div style={{ padding: 16 }}>
+        <span dangerouslySetInnerHTML={{ __html: this.state.info }}></span>
       </div>
     );
   }

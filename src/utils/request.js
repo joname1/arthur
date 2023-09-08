@@ -1,5 +1,5 @@
-//全局路径
-const commonUrl = 'https://wvvw.cdn1.now.sh'
+﻿//全局路径
+const commonUrl = 'https://api.edu-edu.com/mockjsdata/32'
 
 //解析json
 function parseJSON(response) {
