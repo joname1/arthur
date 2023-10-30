@@ -2,7 +2,7 @@
 import request from './utils/request';
 import { Toast } from 'antd-mobile';
 import { Scene, Marker, Popup, Zoom, PolygonLayer } from '@antv/l7';
-import { GaodeMap } from '@antv/l7-maps';
+import { Mapbox } from '@antv/l7-maps';
 import data from "./assets/blockedArea.json";
 
 class App extends Component {
@@ -15,12 +15,12 @@ class App extends Component {
   getLocationData() {
     const scene = new Scene({
       id: 'map',
-      map: new GaodeMap({
-        style: 'normal',
+      map: new Mapbox({
+        style: 'dark',
         rotateEnable: false,
         center: [108.3230, 22.8200],
         zoom: 10,
-        token: 'ff533602d57df6f8ab3b0fea226ae52f'
+        token: 'pk.eyJ1Ijoic3ZjLW9rdGEtbWFwYm94LXN0YWZmLWFjY2VzcyIsImEiOiJjbG5sMnExa3kxNTJtMmtsODJld24yNGJlIn0.RQ4CHchAYPJQZSiUJ0O3VQ'
       }),
     });
     const blockLayer = new PolygonLayer()
