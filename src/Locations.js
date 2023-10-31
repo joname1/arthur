@@ -16,7 +16,7 @@ class App extends Component {
     const scene = new Scene({
       id: 'map',
       map: new Mapbox({
-        style: 'dark',
+        style: 'light',
         rotateEnable: false,
         center: [108.3230, 22.8200],
         zoom: 10,
